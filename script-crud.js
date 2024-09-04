@@ -126,7 +126,13 @@ const removerTarefas = (somenteCompletas)=>{
     atualizarTarefas()
 }
 
-btnRemoverConcluidas.onclick = () => removerTarefas(true)
-btnRemoverTodas.onclick = () =>{
+// btnRemoverConcluidas.onclick = () => removerTarefas(true)
+// btnRemoverTodas.onclick = () =>{
+//     removerTarefas(false)
+// }
+btnRemoverConcluidas.addEventListener('click', () =>{
+    removerTarefas(true)
+})
+btnRemoverTodas.addEventListener('click', ()=>{
     removerTarefas(false)
-}
+})
